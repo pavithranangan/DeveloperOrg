@@ -1,0 +1,28 @@
+<apex:page controller="sampleController"> 
+                
+                 <apex:form >
+                 <apex:pageBlock >
+                  <apex:pageBlockButtons location="top" >
+                  <apex:commandButton action="{!Save}" value="Save"/>
+                  </apex:pageBlockButtons>
+                  <apex:pageBlockSection columns="1">
+                       
+                       <apex:inputField value="{!account.Name}"/>
+                      <apex:inputField value="{!account.Phone}"/>
+                      <apex:inputField value="{!account.Website}"/>
+                      <apex:inputField value="{!account.Industry}"/>
+                 </apex:pageBlockSection>
+                 <apex:pageBlockSection title="Add Contacts ti the Account" >
+                     <apex:repeat value="{!contList}" var="ct" id="table" rows="2">
+                      <apex:inputField value="{!ct.LastName}"/>
+                      <apex:inputField value="{!ct.Firstname}"/>
+                      <apex:inputField value="{!ct.Title}"/>
+                      <apex:inputField value="{!ct.phone}"/>
+                      </apex:repeat> 
+                      </apex:pageBlockSection>
+                 <apex:commandButton value="Add Row" Action="{!AddRow}" immediate="true" id="button"/> 
+                       
+                       </apex:pageBlock>
+                       </apex:form>
+              
+</apex:page>

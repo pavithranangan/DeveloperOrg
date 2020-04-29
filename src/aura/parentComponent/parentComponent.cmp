@@ -1,0 +1,36 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global"   controller="AccountListController">
+    
+     <!-- attributes -->
+    <aura:attribute name="mydata" type="Object"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    <aura:attribute name="errors" type="Object" default="[]"/>
+    <aura:attribute name="draftValues" type="Object" default="[]"/>
+    <aura:attribute name = "maxRowSelection" type = "Integer" default = "5"/> 
+    <aura:attribute name = "selectedRowsCount" type = "Integer" default = "0"/>
+	<aura:attribute name="saveDraftValues" type="Object"/>
+    
+    <!-- handlers-->
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+
+    <div class="slds-p-around_medium">
+        <h1 class="slds-text-heading_large">Inline edit playground</h1>
+    </div>
+ {!v.selectedRowsCount}{!v.saveDraftValues}
+    
+    <!-- the container element determine the height of the datatable -->
+    <div style="height: 300px">
+        <lightning:datatable
+            aura:id = "myTable"
+            columns="{! v.mycolumns }"
+            data="{! v.mydata }"
+            keyField="Id"
+            errors="{! v.errors }"
+            draftValues="{! v.draftValues }"
+            onsave="{! c.handleSaveEdition }"
+            onrowselection="{! c.updateSelectedText }"
+            maxRowSelection="{! v.maxRowSelection }"
+        />
+    </div>
+   
+      <lightning:button label="Click here" onclick="{!c.handleSaveEdition}"/> 
+</aura:component>

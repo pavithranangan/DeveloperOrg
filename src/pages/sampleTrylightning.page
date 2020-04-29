@@ -1,0 +1,19 @@
+<apex:page >
+<apex:slds />
+<script>
+ $Lightning.use("c:AddProductApp", function() {
+ $Lightning.createComponent("c:AddProduct",
+ { 
+ borderColor : "#16325c", 
+ bgColor : "#16325c" ,
+ fontColor : "#FFF",
+ frontText : "What's cool about Lightning Component Development",
+ backText : "You dont need to enable Lightning experience, It will work on Classic Instance as well"
+ },
+ "FlipcardContainer",
+ function(cmp) {
+ console.log('Component created, do something cool here');
+ });
+ });
+ </script>
+</apex:page>

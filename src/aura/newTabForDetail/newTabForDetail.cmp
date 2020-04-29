@@ -1,0 +1,23 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasSObjectName,flexipage:availableForRecordHome,force:lightningQuickActionWithoutHeader,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable" access="global" controller = "tryPavitranClass">
+    <aura:attribute name="accountId" type="String" />
+    <aura:attribute name="record" type="Object" 
+                    description="The record object to be displayed"/>
+    <aura:attribute name="simpleRecord" type="Object" 
+                    description="A simplified view record object to be displayed"/>
+    <aura:attribute name="recordError" type="String" 
+                    description="An error message bound to force:recordData"/>
+    <aura:attribute name="editActive" type="boolean" default="false"/>
+    
+    <force:recordData aura:id="record"
+                      layoutType="FULL"
+                      recordId="{!v.recordId}"
+                      targetError="{!v.recordError}"
+                      targetRecord="{!v.record}"
+                      targetFields ="{!v.simpleRecord}"
+                      recordUpdated="{!c.var}" />
+    <aura:if isTrue="{!v.editActive}">
+        <force:recordEdit aura:id="edit" recordId="{!v.accountId}"/>
+        <lightning:button label="Save" onclick="{!c.save}"/>
+    </aura:if>
+    
+</aura:component>

@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Apartment_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Apartment Name</label>
+        <referenceTo>Apartment__c</referenceTo>
+        <relationshipLabel>Enquires</relationshipLabel>
+        <relationshipName>Enquires</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Budget__c</fullName>
+        <externalId>false</externalId>
+        <label>Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Current_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Discount_given__c</fullName>
+        <externalId>false</externalId>
+        <formula>Apartment_Name__r.Discount_given__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Discount given</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Do_have_loan__c</fullName>
+        <externalId>false</externalId>
+        <label>Do have loan on own house ?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Floor_number__c</fullName>
+        <externalId>false</externalId>
+        <label>Floor number</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Have_own_house__c</fullName>
+        <externalId>false</externalId>
+        <label>Have own house?</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Kind_of_Penthouse__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Kind of Penthouse</label>
+        <referenceTo>Penthouse__c</referenceTo>
+        <relationshipLabel>Enquires</relationshipLabel>
+        <relationshipName>Enquires</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Kind_of_flat__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Kind of flat</label>
+        <referenceTo>Flat__c</referenceTo>
+        <relationshipLabel>Enquires</relationshipLabel>
+        <relationshipName>Enquires</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( RecordType.Name == &quot;Flat&quot;, Kind_of_flat__r.Price_of_flat__c , Kind_of_Penthouse__r.Price_of_flat__c   )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Reason_for_lost__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason for lost</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Competitor</fullName>
+                    <default>false</default>
+                    <label>Competitor</label>
+                </value>
+                <value>
+                    <fullName>Not satisfied with price</fullName>
+                    <default>false</default>
+                    <label>Not satisfied with price</label>
+                </value>
+                <value>
+                    <fullName>Changed their mind in buying</fullName>
+                    <default>false</default>
+                    <label>Changed their mind in buying</label>
+                </value>
+                <value>
+                    <fullName>Not satisfied with construction</fullName>
+                    <default>false</default>
+                    <label>Not satisfied with construction</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Salary_per_annum__c</fullName>
+        <externalId>false</externalId>
+        <label>Salary per annum</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Sales_person_Contacting__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sales person (Contacting)</label>
+        <referenceTo>Sales_person__c</referenceTo>
+        <relationshipLabel>Enquires</relationshipLabel>
+        <relationshipName>Enquires</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Stages__c</fullName>
+        <externalId>false</externalId>
+        <label>Stages</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Enquiry</fullName>
+                    <default>false</default>
+                    <label>Enquiry</label>
+                </value>
+                <value>
+                    <fullName>Visit to the site</fullName>
+                    <default>false</default>
+                    <label>Visit to the site</label>
+                </value>
+                <value>
+                    <fullName>Interested</fullName>
+                    <default>false</default>
+                    <label>Interested</label>
+                </value>
+                <value>
+                    <fullName>Quote</fullName>
+                    <default>false</default>
+                    <label>Quote</label>
+                </value>
+                <value>
+                    <fullName>Negotiation</fullName>
+                    <default>false</default>
+                    <label>Negotiation</label>
+                </value>
+                <value>
+                    <fullName>On Hold</fullName>
+                    <default>false</default>
+                    <label>On Hold</label>
+                </value>
+                <value>
+                    <fullName>Sold</fullName>
+                    <default>false</default>
+                    <label>Sold</label>
+                </value>
+                <value>
+                    <fullName>Lost</fullName>
+                    <default>false</default>
+                    <label>Lost</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Total_cost_with_discount__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_cost_without_discount__c -  Apartment_Name__r.Discount_given__c * Total_cost_without_discount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total cost with discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_cost_without_discount__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( RecordType.Name == &quot;Flat&quot;, Price__c +  (    Kind_of_flat__r.Square_feet__c *25* Floor_number__c ), Price__c +(  Kind_of_Penthouse__r.Sq_ft_for_penthouse__c  *25* Floor_number__c ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total cost without discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>When_plan_to_buy__c</fullName>
+        <externalId>false</externalId>
+        <label>When plan to buy</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Before 6 months</fullName>
+                    <default>false</default>
+                    <label>Before 6 months</label>
+                </value>
+                <value>
+                    <fullName>Within 6 months to 1 year</fullName>
+                    <default>false</default>
+                    <label>Within 6 months to 1 year</label>
+                </value>
+                <value>
+                    <fullName>Within 1 - 2 year</fullName>
+                    <default>false</default>
+                    <label>Within 1 - 2 year</label>
+                </value>
+                <value>
+                    <fullName>More than 2 year</fullName>
+                    <default>false</default>
+                    <label>More than 2 year</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Enquiry</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Enquirer Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Enquires</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Flat</fullName>
+        <active>true</active>
+        <description>Flats can be of different square foot and with varying number of bedrooms</description>
+        <label>Flat</label>
+        <picklistValues>
+            <picklist>Do_have_loan__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Have_own_house__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_for_lost__c</picklist>
+            <values>
+                <fullName>Changed their mind in buying</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not satisfied with construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not satisfied with price</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stages__c</picklist>
+            <values>
+                <fullName>Enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Negotiation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visit to the site</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>When_plan_to_buy__c</picklist>
+            <values>
+                <fullName>Before 6 months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>More than 2 year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Within 1 - 2 year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Within 6 months to 1 year</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Penthouse</fullName>
+        <active>true</active>
+        <description>Penthouses come with amenities like Wooden flooring, False ceiling, French windows</description>
+        <label>Penthouse</label>
+        <picklistValues>
+            <picklist>Do_have_loan__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Have_own_house__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason_for_lost__c</picklist>
+            <values>
+                <fullName>Changed their mind in buying</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not satisfied with construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not satisfied with price</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stages__c</picklist>
+            <values>
+                <fullName>Enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Negotiation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visit to the site</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>When_plan_to_buy__c</picklist>
+            <values>
+                <fullName>Before 6 months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>More than 2 year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Within 1 - 2 year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Within 6 months to 1 year</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Floor_number</fullName>
+        <active>true</active>
+        <errorConditionFormula>Floor_number__c  &gt;=  Apartment_Name__r.Number_of_floors__c</errorConditionFormula>
+        <errorMessage>Verify the total number of floors</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Salary</fullName>
+        <active>true</active>
+        <errorConditionFormula>Salary_per_annum__c  &lt; 3000000</errorConditionFormula>
+        <errorMessage>Salary must need to be greater or equal to 30L</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Stages_is_complesory</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL( Stages__c , &quot;&quot;)</errorConditionFormula>
+        <errorMessage>knidly enter the valid stages</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>floor_number_need_to_match_apartment</fullName>
+        <active>true</active>
+        <errorConditionFormula>Floor_number__c  &gt; Apartment_Name__r.Number_of_floors__c</errorConditionFormula>
+        <errorMessage>No such floor available, check apartment</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>have_own_house_enter_loan</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL( Have_own_house__c , &quot;Yes&quot;) &amp;&amp;  ISBLANK(  IF(ISPICKVAL( Do_have_loan__c , &quot;Yes&quot;),&quot;True&quot;,&quot;False&quot;) )</errorConditionFormula>
+        <errorMessage>If have own house, then kindly enter the loan details</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>if_own_house_enter_current_address</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL( Have_own_house__c , &quot;Yes&quot;) &amp;&amp;  ISBLANK( Current_Address__c )</errorConditionFormula>
+        <errorMessage>If ypou have own house, kindly enter current address</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>minimum_amount_for_penthouse</fullName>
+        <active>true</active>
+        <errorConditionFormula>RecordType.Name ==&quot;Penthouse&quot; &amp;&amp; Total_cost_with_discount__c &gt;60000000</errorConditionFormula>
+        <errorMessage>Maximum amount for penthouse is 6C</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>stages_is_lost_reason_must</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL( Stages__c , &quot;Lost&quot;) &amp;&amp;  ISBLANK( Reason_for_lost__c )</errorConditionFormula>
+        <errorMessage>If the enquiry is lost, then kindly select the reason.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

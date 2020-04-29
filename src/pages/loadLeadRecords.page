@@ -1,0 +1,12 @@
+<apex:page standardcontroller="Lead" extensions="australianTiming"> 
+    <apex:form >
+        <apex:pageBlock >
+
+            <apex:pageBlockSection columns="1">
+                hii
+                <apex:commandButton action="{!Save}" value="Save"/>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

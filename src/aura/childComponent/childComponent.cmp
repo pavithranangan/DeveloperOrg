@@ -1,0 +1,38 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" controller = "AccountListController" >
+    <aura:handler name = "init" value = "{!this}" action = "{!c.initiation}"/>
+    <aura:attribute name="mydata" type="Object[]"/>
+    
+    <table class="slds-table slds-table--bordered slds-table--cell-buffer" >
+        <thead>
+            <tr class="slds-text-title">
+                <th scope="col">
+                    <div title="Name" class="slds-truncate">Select</div>
+                </th>
+                <th scope="col">
+                    <div title="Name" class="slds-truncate">Category Name</div>
+                </th>
+                <th scope="col">
+                    <div title="Description" class="slds-truncate">Category Classification</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.mydata}" var="category">
+                <tr>
+                    <td>
+                        <label class="slds-checkbox">
+                            <ui:inputCheckbox aura:id="checkCategory" text="{!category.Id}" />
+                            <span class="slds-checkbox--faux" />
+                        </label>
+                    </td>
+                    <td  data-label="Name" scope="row">
+                        <div class="slds-truncate">{!category.Name}</div>
+                    </td>
+                    <td  data-label="Description">
+                        <div class="slds-truncate">{!category.StageName}</div>
+                    </td>
+                </tr>
+            </aura:iteration>	
+        </tbody>
+    </table>
+</aura:component>

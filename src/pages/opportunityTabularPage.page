@@ -1,0 +1,39 @@
+<apex:page controller="opportunityTabularPageClass"   lightningStylesheets="true">
+    <apex:slds />
+    <apex:form >
+        <apex:pageBlock title="Opportunity Information" >
+            <apex:pageBlockButtons location="Bottom" >
+                <div align="center" draggable="false" >
+                    <apex:commandButton id="save" action="{!quickUpdat}" value="Save"/>
+                </div>
+            </apex:pageBlockButtons>
+            <apex:dataTable value="{!oppVariable}" var="opp" title="Results" >
+                <apex:inlineEditSupport id="oppName" disabled="true" showOnEdit="save" hideOnEdit="editButton" event="ondblclick" changedStyleClass="myBoldClass" ></apex:inlineEditSupport>    
+                <apex:column headerValue="Name">
+                    <apex:outputfield value="{!opp.name}">
+                        <apex:inlineEditSupport disabled="true"/>
+                    </apex:outputfield>
+                </apex:column>
+				<apex:inlineEditSupport showOnEdit="save" hideOnEdit="editButton" event="ondblclick" changedStyleClass="myBoldClass" ></apex:inlineEditSupport>                
+             
+                <apex:column headerValue="Amount" rendered="{!$ObjectType.Opportunity.Fields['Amount'].accessible}">
+                    <apex:outputfield value="{!opp.Amount}" >		
+                    </apex:outputfield>
+                </apex:column>	
+                <apex:column headerValue="Close Date">
+                    <apex:outputfield value="{!opp.CloseDate}"/>
+                </apex:column>
+                <apex:column headerValue="Stage">
+                    <apex:outputfield value="{!opp.StageName}"/>
+                </apex:column>
+                <apex:column headerValue="AccountId" rendered="{!$ObjectType.Opportunity.Fields['AccountId'].accessible}">
+                    <apex:outputfield value="{!opp.AccountId}">
+        			</apex:outputfield>
+                </apex:column>
+            </apex:dataTable>
+            <apex:pageBlockSection >
+
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

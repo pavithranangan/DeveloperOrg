@@ -1,0 +1,9 @@
+<apex:page controller="EmployeeGetterSetter"> 
+<apex:form >
+     <p/>
+        <apex:inputText id="text1" value="{!SearchText}"/> <p/>
+        <apex:commandButton value="display"  action="{!addition}" />
+        {!SearchText}
+                
+</apex:form>
+</apex:page>

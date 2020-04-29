@@ -1,0 +1,6 @@
+<apex:page controller="opportunityViewController" action="{!setRedirect}" >
+    <apex:form >
+        <apex:pageMessages />
+        
+    </apex:form>
+</apex:page>

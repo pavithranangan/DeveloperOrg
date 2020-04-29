@@ -1,0 +1,19 @@
+<apex:page controller="InlineEditInVFController">
+<apex:form >
+<apex:pageBlock title="Opportunity Information" >
+<apex:pageBlockTable value="{!acc}" var="a" title="Results" >
+<apex:inlineEditSupport showOnEdit="update, cancelButton" hideOnEdit="editButton" event="ondblclick" changedStyleClass="myBoldClass" resetFunction="resetInlineEdit"></apex:inlineEditSupport>
+<apex:column headerValue="Name">
+<apex:outputfield value="{!a.name}"/>
+</apex:column>
+<apex:column headerValue="id">
+<apex:outputfield value="{!a.Amount}"/>
+</apex:column>
+<apex:column >
+<apex:outputfield value="{!a.CloseDate}"/>
+</apex:column>
+</apex:pageBlockTable>
+</apex:pageBlock>
+<apex:commandButton id="update" action="{!quickUpdat}" value="UpdateRecord"/>
+</apex:form>
+</apex:page>

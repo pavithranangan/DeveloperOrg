@@ -1,0 +1,8 @@
+<apex:page controller="combinationAccountContact">
+    <apex:form >
+        <apex:pageBlock >
+            <h3>Account and Contacts Inserted Successfully</h3>
+            <apex:commandLink action="{!redirect}" value="To view account"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

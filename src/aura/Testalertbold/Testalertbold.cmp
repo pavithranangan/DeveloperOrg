@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable,force:lightningQuickAction" >
+	<div id="header">
+		header
+	</div>
+	<div id="content">
+		body
+	</div>
+	<div id="footer">
+		Footer
+	</div>
+	<div id="floating">
+		Floating div
+	</div>
+</aura:component>

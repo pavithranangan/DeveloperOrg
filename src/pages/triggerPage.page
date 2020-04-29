@@ -1,0 +1,8 @@
+<apex:page standardController="Applicant__c" extensions="triggerHandler1">
+   <apex:form >
+       <apex:pageBlock >
+       <apex:inputField value="{!Applicant__c.Name}"></apex:inputField>
+       <apex:commandButton value="save" action="{!tryTrigger}"></apex:commandButton>
+    </apex:pageBlock>
+   </apex:form>
+</apex:page>

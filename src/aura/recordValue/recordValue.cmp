@@ -1,0 +1,4 @@
+<aura:component implements="force:hasSObjectName" access="global">
+  <aura:attribute name="sobjecttype" type="String" default="{!v.sObjectName}"/>
+  {!v.sobjecttype}
+</aura:component>

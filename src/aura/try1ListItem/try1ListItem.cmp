@@ -1,0 +1,4 @@
+<aura:component >
+	<aura:attribute name = "items" type = "Camping_Item__c"/>
+    Name : <ui:outputText value="{!v.items.Name}"/>
+</aura:component>

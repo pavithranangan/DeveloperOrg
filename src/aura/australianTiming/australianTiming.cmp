@@ -1,0 +1,96 @@
+<aura:component implements="flexipage:availableForRecordHome,force:lightningQuickActionWithoutHeader,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable" access="global" controller = "tryPavitranClass">
+    <aura:attribute name="resultantValue" type="Map" />
+    <aura:attribute name="noOfContact" type="Integer" />
+    <aura:attribute name="noOfOpportunity" type="Integer" />
+    <aura:attribute name="leadState" type="String" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="resultCustomer" type="String" />
+    <aura:attribute name="checkPeople" type="Integer"/>
+    <aura:attribute name="pageReference" type="Object"/>
+ 	<lightning:navigation aura:id="navId"/>
+    <lightning:recordEditForm aura:id="leadCreateForm" objectApiName="Lead"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    Record Id - {!v.recordId}
+    <lightning:layout class="slds-page-header slds-page-header--object-home" multipleRows="true" VerticalAlign="center" horizontalAlign="center">
+        <lightning:layoutItem padding="vertical-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">Lightning Component- Sample Try </h1>
+            </div>
+        </lightning:layoutItem>
+        <lightning:layoutItem>
+            <lightning:card title="Australian Time">
+                <div class="slds-align_absolute-center">
+                    <p> {!v.resultantValue.australianTime}</p>
+                </div>
+            </lightning:card>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <lightning:layout class="slds-page-header slds-page-header--object-home" multipleRows="true" VerticalAlign="center" horizontalAlign="center">
+        <lightning:layoutItem>
+            <lightning:card title="Check Customer">
+                <div class="slds-align_absolute-center">
+                    <lightning:button label="Click here" onclick="{!c.checkAccount}"/> 
+                </div>
+                <div class="slds-align_absolute-center">
+                    <p>{!v.resultCustomer}</p>
+                </div>
+            </lightning:card>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <lightning:layout class="slds-page-header slds-page-header--object-home" multipleRows="true" VerticalAlign="center" horizontalAlign="center">
+        <lightning:layoutItem>
+            <lightning:card title="People in Space">
+                <div class="slds-align_absolute-center">
+                    <lightning:button label="Check" onclick="{!c.checkApi}"/> 
+                </div>
+                <div class="slds-align_absolute-center">
+                    <p> {!v.checkPeople}</p>
+                </div>
+            </lightning:card>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <lightning:layout class="slds-page-header slds-page-header--object-home" multipleRows="true" VerticalAlign="center" horizontalAlign="center">
+        <lightning:layoutItem>
+            <lightning:card title="Weather Status based on City">
+                <div class="slds-align_absolute-center">
+                    <p>{!v.resultantValue.Weather}</p>
+                </div>
+            </lightning:card>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <lightning:layout class="slds-page-header slds-page-header--object-home" multipleRows="true" VerticalAlign="center" horizontalAlign="center">
+        <lightning:layoutItem>
+            <lightning:card title="Redirect to Visualforce Page">
+                <div class="slds-align_absolute-center">
+                    <lightning:button label="Navigation" title="NavigationRec" onclick="{!c.checkVf}" />
+                </div>
+            </lightning:card>
+        </lightning:layoutItem>
+    </lightning:layout> 
+    <lightning:layout class="slds-page-header slds-page-header--object-home" multipleRows="true" VerticalAlign="center" horizontalAlign="center">
+        <lightning:layoutItem>
+            <lightning:card title="Account Related List">
+                
+                <div class="slds-align_absolute-center">
+                    <lightning:button label="Click Here" title="clickHere" onclick="{!c.relatedListAccount}" />
+                </div>
+                <div class="slds-align_absolute-center">
+                    <p>{!v.noOfContact}</p>
+                </div>
+                <div class="slds-align_absolute-center">
+                    <p>{!v.noOfOpportunity}</p>
+                </div>
+            </lightning:card>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <lightning:layout class="slds-page-header slds-page-header--object-home" multipleRows="true" VerticalAlign="center" horizontalAlign="center">
+        <lightning:layoutItem>
+            <lightning:card title="Component to VF page">
+                <lightning:navigation aura:id="navService"/>
+                <div class="slds-align_absolute-center">
+                    <lightning:button label="Redirection" title="NavigationRec" onclick="{!c.NavigationRec}" />	
+                </div>
+            </lightning:card>
+        </lightning:layoutItem>
+    </lightning:layout> 
+</aura:component>

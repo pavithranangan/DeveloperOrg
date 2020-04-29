@@ -1,0 +1,15 @@
+<apex:page controller="Sample">
+<apex:form >
+    <apex:pageblock >
+        <apex:pageBlockSection >
+            <apex:panelGrid columns="2">
+                Name :
+                <apex:inputText value="{!Nam}"/>
+                Skilled :
+                <apex:inputCheckbox value="{!Skilled}"/>
+            </apex:panelGrid>           
+        </apex:pageBlockSection>
+        <apex:commandButton value="Save" action="{!sav}"/>
+    </apex:pageblock>
+</apex:form>
+</apex:page>

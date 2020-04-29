@@ -1,0 +1,24 @@
+<apex:page controller="CustomPOPupCon" showHeader="false">
+    <apex:includeLightning />
+    <div id="Con" />
+    <script>
+
+            $Lightning.use(“c:AddProductApp”, function() {
+            $Lightning.createComponent(
+
+                    “c:FormContact”,
+
+                    {},
+
+                    “Con”,
+
+                    function(cmp) {
+
+                        console.log(“Component is created!”);
+
+                        console.log(cmp);
+
+                    });
+            });
+    </script>
+</apex:page>

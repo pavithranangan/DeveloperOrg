@@ -1,0 +1,29 @@
+<aura:component implements="lightning:actionOverride,flexipage:availableForRecordHome,force:hasRecordId,flexipage:availableForRecordHome,force:hasRecordId,flexipage:availableForRecordHome,force:hasSObjectName,flexipage:availableForRecordHome,force:lightningQuickActionWithoutHeader,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable" access="global">
+
+    <ltng:require styles="{!$Resource.float}"/>
+    <!--Attributes-->
+    <aura:attribute name="showConfirmDialog" type="boolean" default="false"/>
+    <div id="header">
+		header
+	</div>
+	<div id="content">
+		body
+	</div>
+	<div id="footer">
+		Footer
+	</div>
+     <div class="slds-is-fixed">
+	<div id="floating">
+		Floating div
+	</div>
+    </div>
+    <!-- <div class="cHeaderWrapper">...</div>
+        <div class="cCenterPanel">...</div>
+        
+=
+    <div class="slds-m-around_xx-large">
+        <lightning:button name="delete" variant="brand" label="Delete" onclick="{!c.handleConfirmDialog}"/>
+    </div>
+    
+    <div class="cFooterPanel">hi everyone</div>-->
+</aura:component>

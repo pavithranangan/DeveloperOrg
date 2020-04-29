@@ -1,0 +1,36 @@
+<apex:page standardController="Applicant__c">
+<apex:relatedList list="Employees__r" />
+<apex:relatedList list="Educations__r"/>
+<apex:form >
+<apex:pageBlock title="Applicant">
+{!Applicant__c.Name}
+</apex:pageBlock>
+<apex:pageBlock >
+<apex:pageMessages id="someMessages" />
+<apex:pageBlockButtons location="top">
+<apex:commandButton value="Save" action="{!save}" reRender="someMessages"/>
+<apex:commandButton value="List" action="{!List}" />
+<apex:commandButton value="Delete" action="{!delete}" />
+<apex:commandButton value="Cancel" action="{!cancel}" />
+</apex:pageBlockButtons>
+<apex:pageBlockSection title="Basic Details">
+<apex:inputField value="{!Applicant__c.Name}" required="true"/>
+<apex:inputField value="{!Applicant__c.Mobile_Number__c}"/>
+<apex:inputField value="{!Applicant__c.Mail__c}" required="true"/>
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Address">
+<apex:inputField value="{!Applicant__c.Address__c}"/>
+<apex:inputField value="{!Applicant__c.Country__c}"/>
+<apex:inputField value="{!Applicant__c.Zip_Code__c}"/>
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Working Details">
+<apex:inputField value="{!Applicant__c.Are_you_working__c}"/>
+<apex:inputField value="{!Applicant__c.Comapny_Name__c}"/>
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Created Details">
+<apex:outputField value="{!Applicant__c.CreatedById}"/>
+<apex:outputField value="{!Applicant__c.CreatedDate}"/>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

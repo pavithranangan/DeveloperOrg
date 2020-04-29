@@ -1,0 +1,8 @@
+<aura:component implements="force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+  
+        <force:recordEdit aura:id="edit" recordId="a02D0000006V8Ni"/>
+        <lightning:button label="Save" onclick="{!c.save}"/>
+        Hi {!v.accountId}
+
+    
+</aura:component>

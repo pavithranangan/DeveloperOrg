@@ -1,0 +1,25 @@
+<apex:page standardController="Applicant__c" >
+<apex:form >
+    <apex:pageBlock title="My Applicant ">
+        <apex:pageMessages id="messages"></apex:pageMessages>
+        <apex:pageBlockButtons location="Top">
+            <apex:commandButton action="{!save}" value="create" reRender="messages"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection title="Basic Details">
+            <apex:inputField value="{!Applicant__c.name}"/>
+            <apex:inputField value="{!Applicant__c.Mobile_Number__c}"/>
+            <apex:inputField value="{!Applicant__c.Mail__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Address">
+            <apex:inputField value="{!Applicant__c.Address__c}"/>
+            <apex:inputField value="{!Applicant__c.Country__c}"/>
+            <apex:inputField value="{!Applicant__c.Zip_Code__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Company Detials">
+            <apex:inputField value="{!Applicant__c.Are_you_working__c}"/>
+            <apex:inputField value="{!Applicant__c.Comapny_Name__c}"/>
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

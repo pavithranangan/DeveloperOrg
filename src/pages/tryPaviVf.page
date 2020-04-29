@@ -1,0 +1,17 @@
+<apex:page controller="tryPavitranClass">
+ <apex:form >
+  <apex:pageBlock title="Accounts">{!idAcc} {!count}
+    <apex:pageBlockButtons >
+      <apex:commandButton action="{!next}" value="next"/>
+        
+    </apex:pageBlockButtons>
+    <apex:pageBlockTable value="{!accounts}" var="acc">
+
+      <apex:column value="{!acc.id}"/>
+      <apex:column value="{!acc.Name}"/>
+    </apex:pageBlockTable>
+      {!count}
+  </apex:pageBlock>
+     
+ </apex:form>
+</apex:page>

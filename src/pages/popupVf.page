@@ -1,0 +1,19 @@
+<apex:page showChat="false" showHeader="false" sidebar="false" applyBodyTag="false" applyHtmlTag="false" controller="opportunityViewController">
+    <script type="text/javascript">
+ 		var r = confirm("Are you sure want to save?");
+            if(r == true) {                
+                alert('hi');
+
+				window.location.href='https://lightningtry-dev-ed.lightning.force.com/lightning/r/Applicant__c/a0V2v00000UIkXEEA1/view';                	
+            }else{
+                window.location.href='https://lightningtry-dev-ed.my.salesforce.com/apex/opportunityTabularPage'; 
+                }
+          
+    </script>
+    <apex:form >
+    	    <apex:actionFunction name="CallApexMethod" action="{!setRedirect}" onComplete="alert('After apex method') ;"/>
+    </apex:form>
+
+
+    
+</apex:page>

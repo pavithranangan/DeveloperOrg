@@ -1,0 +1,32 @@
+<apex:page controller="caseForm" showHeader="true" wizard="false">
+ <style>
+        body{
+            background-color: yellow;  
+        }
+ </style>
+<apex:form styleClass="myFormStyle">
+      
+      <apex:sectionHeader > 
+          <apex:image alt="companyLogo" id="theImage" value="{!$Resource.companyLogo}" width="200" height="50"/>
+      </apex:sectionHeader>
+      
+      
+      <apex:pageBlock title="Details">
+         <apex:pageMessages id="alertMessage" rendered="true"/>
+          <apex:pageBlockButtons location="Bottom">
+              <apex:commandButton value="Save" action="{!saveApplicant}" />
+          </apex:pageBlockButtons>
+          <apex:pageBlockSection columns="1" >
+              <apex:outputLabel value="Name"><apex:inputText value="{!caseName}"></apex:inputText></apex:outputLabel>
+              <apex:outputLabel value="Subject"><apex:inputText value="{!caseSubject}"></apex:inputText></apex:outputLabel>
+              <apex:outputLabel value="Description"><apex:inputText value="{!caseDescription}"></apex:inputText></apex:outputLabel>
+              <apex:outputLabel value="File to Upload "><apex:inputfile value="{!objFile}" filename="{!objFileName}"></apex:inputfile></apex:outputLabel>
+          </apex:pageBlockSection>
+      </apex:pageBlock>
+  </apex:form>
+  <apex:outputPanel rendered="{!alertMessage} != ''">
+    <script type="text/javascript">
+    alert('{!alertMessage');
+    </script>
+</apex:outputPanel>   
+</apex:page>

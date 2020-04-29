@@ -1,0 +1,138 @@
+<aura:component controller = "try1Controller"  implements="flexipage:availableForRecordHome,force:hasRecordId,flexipage:availableForRecordHome,force:hasSObjectName,flexipage:availableForRecordHome,force:lightningQuickActionWithoutHeader,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable" access="global" >
+    
+    <aura:attribute name = "campaingValue" type="Camping_Item__c" default="{ 'sobjectType': 'Camping_Item__c',
+                                                                           'Name': '','Packed__c': 'Price__c','' : '', 'Quantity__c' : ''}" />
+    <aura:handler name = "init" value = "{!this}" action = "{!c.doInit}"/>
+    <lightning:input type="text" name="{!v.campaingValue.Name}" label="Enter a Name" value = "{!v.campaingValue.Name}"/>
+    <lightning:input type="text" name="{!v.campaingValue.Packed__c}" label="Enter a Packed__c" value = "{!v.campaingValue.Packed__c}"/>
+    <lightning:input type="text" name="{!v.campaingValue.Price__c}" label="Enter a Price__c" value = "{!v.campaingValue.Price__c}"/>
+    <aura:attribute name="accountRecord" type="Object"/>
+    <aura:attribute name="recordLoadError" type="String"/>
+    <aura:attribute name="fields" type="String[]" default="['Name','AnnualRevenue','Industry']" />
+    <aura:attribute type="Date" name="dateDefaultWithTimeString" default="2020-03-30"/>
+    <aura:handler name="change" value="{!v.showParent}" action="{!c.doShowParent}"/>
+    
+    <lightning:tabset variant="vertical">
+        <lightning:tab label="Item One">
+            Name -  {!v.campaingValue.Name}
+            Packed__c - {!v.campaingValue.Packed__c}
+            Price__c - {!v.campaingValue.Price__c}
+            
+        </lightning:tab>
+        <lightning:tab label="Item Two">
+            <lightning:input 
+                             aura:id="myCheckboxes" 
+                             type="checkbox" 
+                             label="Option 1" 
+                             value="Option 1"/>
+            <lightning:input 
+                             aura:id="myCheckboxes" 
+                             type="checkbox" 
+                             label="Option 2" 
+                             value="Option 2"/>
+            <lightning:button label="Ok" onclick="{!c.doCancel}"/>
+        </lightning:tab>
+        <lightning:tab label="Item Three">
+            
+            <lightning:accordion aura:id="accordion" activeSectionName="record view form"  allowMultipleSectionsOpen="true">
+                <lightning:accordionSection name=" record view form" label=" record view form">
+                    <!-- record view form -->
+                    <lightning:card iconName="standard:account" title="Record View Form" >
+                        <lightning:recordViewForm recordId="0012v00002tE7rmAAC" objectApiName="Account">
+                            <div class="slds-box">
+                                <lightning:accordionSection name=" record view form" label=" record view form">
+                                    <lightning:outputField fieldName="Name" />
+                                </lightning:accordionSection>
+                                <lightning:accordionSection name=" record view form" label=" record view form">
+                                    <lightning:outputField fieldName="Email__c" />
+                                </lightning:accordionSection>
+                            </div>
+                        </lightning:recordViewForm>
+                    </lightning:card>
+                </lightning:accordionSection>
+                <!-- record data -->
+                <lightning:accordionSection name="record data" label="record data">
+                    
+                    <div class="slds-p-horizontal--small">
+                        <force:recordData aura:id="recordLoader"
+                                          recordId="0012v00002tE7rmAAC"
+                                          fields="Name,Description,Phone,Industry"
+                                          targetFields="{!v.accountRecord}"
+                                          targetError="{!v.recordLoadError}"
+                                          />
+                    </div>
+                    <div> 
+                        <lightning:card iconName="standard:account" title="Record Data" >
+                            <div class="slds-p-horizontal--small">
+                                <p class="slds-text-heading--medium"><lightning:formattedPhone title="Phone" value="{!v.accountRecord.Phone}" /></p>
+                                <p class="slds-truncate"><lightning:formattedText title="Description" value="{!v.accountRecord.Description}" /></p>
+                                <p class="slds-truncate"> <lightning:formattedText title="Industry" value="{!v.accountRecord.Industry}" /></p>
+                            </div>
+                        </lightning:card>
+                    </div>
+                </lightning:accordionSection>
+                <!-- both show and edit-->
+                <lightning:accordionSection name="both show and edit" label="both show and edit">
+                    <lightning:card iconName="standard:account" title="Record Form" >
+                        <lightning:recordForm
+                                              aura:id="myRecordForm"
+                                              recordId="0012v00002tE7rmAAC"
+                                              objectApiName="Account"
+                                              fields="{!v.fields}"
+                                              columns="2"
+                                              onsubmit="{!c.handleSubmit}" />
+                    </lightning:card>
+                </lightning:accordionSection>
+                <lightning:accordionSection name="Column Distribution" label="Column Distribution">
+                    
+                </lightning:accordionSection>
+            </lightning:accordion>
+        </lightning:tab>
+        <lightning:tab label="Item Four">
+            <lightning:input type="checkbox" label="Basic option" name="input1" onchange = "{!c.changeVal}"/>
+        </lightning:tab>
+        <lightning:tab label="Item Five">
+            <lightning:input type="date" name="input1" label="Enter a date" aura:id="expDate" onchange = "{!c.changeValDate}"/>
+            {!v.dateDefaultWithTimeString}
+        </lightning:tab>
+        <lightning:tab label="Item Six">
+            <lightning:input aura:id="field" label="First name" name="firstname" placeholder="First name" required="true" />
+            <lightning:input aura:id="field" label="Last name" name="lastname" placeholder="Last name" required="true" />
+            <lightning:select aura:id="field" label="Select the best ice cream flavor" name="flavor" required="true">
+                <option value="">Choose a flavor...</option>
+                <option value="vanilla">Vanilla</option>
+                <option value="chocolate">Chocolate</option>
+                <option value="strawberry">Strawberry</option>
+            </lightning:select>
+            <lightning:textarea aura:id="field" label="Why did you choose this flavor?" name="reason" placeholder="I chose this ice cream flavor because..." />
+            <lightning:button aura:id="submit" type="submit" label="Submit" onclick="{! c.onClick }" />
+        </lightning:tab>
+    </lightning:tabset>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-6">
+            <span>1</span>
+        </div>
+        <div class="slds-col slds-grid slds-size_1-of-2">
+            <div class="slds-grid slds-grid_vertical">
+                <div class="slds-col slds-size_1-of-2">
+                    <span><lightning:input aura:id="tel" type="tel" label="Telephone"
+                                           name="tel"  pattern=" " maxlength="11"
+                                           messageWhenPatternMismatch="Phone number is not valid"
+                                           onblur='{!c.checkValidity}'
+                                           /></span>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <span>Nested: 2</span>
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid slds-grid_vertical">
+            <div class="slds-col slds-size_3-of-4">
+                <span>Nested: 3</span>
+            </div>
+            <div class="slds-col slds-size_3-of-4">
+                <span>Nested: 4</span>
+            </div>
+        </div>
+    </div> 
+</aura:component>

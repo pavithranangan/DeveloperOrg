@@ -1,0 +1,12 @@
+<aura:component  implements="flexipage:availableForRecordHome,force:hasRecordId,flexipage:availableForRecordHome,force:hasSObjectName,flexipage:availableForRecordHome,force:lightningQuickActionWithoutHeader,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable" access="global" >
+	 <!-- record view form -->
+    <lightning:card iconName="standard:account" title="Record View Form" >
+        <lightning:recordViewForm recordId="0012v00002tE7rmAAC" objectApiName="Account">
+            <div class="slds-box">
+                <lightning:outputField fieldName="Name" />
+                <lightning:outputField fieldName="Email__c" />
+                <lightning:outputField fieldName = "AnnualRevenue"/>
+            </div>
+        </lightning:recordViewForm>
+    </lightning:card>
+</aura:component>

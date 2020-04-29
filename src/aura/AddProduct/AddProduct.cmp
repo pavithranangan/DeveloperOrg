@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <aura:attribute name="options" type="List" default="[
+    {'label': 'Sales', 'value': 'option1'},
+    {'label': 'Force', 'value': 'option2'}
+    ]"/>
+    <aura:attribute name="value" type="String" default="option1"/>
+
+       <lightning:radioGroup name="radioGroupRequired"
+                          label="Radio Group"
+                          options="{! v.options }"
+                          value="Incorrect"
+                          type="radio"
+                          onchange="{! c.handleChange }"/>
+</aura:component>
