@@ -1,6 +1,6 @@
 public class account_dml {
     
-    //creating a account
+    //creating a accounts
     public ID creation(String name, String phone, String website,Integer location){
         Account create_account= new Account(Name=name,Phone=phone,Website=website,NumberofLocations__c=location);
         insert create_account;
